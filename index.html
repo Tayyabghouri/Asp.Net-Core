@@ -33,11 +33,21 @@
                     <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-address-card fa-lg"></span>
                             Contact</a></li>
                 </ul>
+
+                <!-- open modal using jquery -->
+
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a data-toggle="modal" id="loginbtn">
                         <span class="fa fa-sign-in"></span>Login
                     </a>
                 </span>
+
+                <!-- //open modal using bootstrap -->
+                <!-- <span class="navbar-text">
+                    <a data-toggle="modal" data-target="#loginModal">
+                        <span class="fa fa-sign-in"></span>Login
+                    </a>
+                </span> -->
             </div>
         </div>
     </nav>
@@ -96,9 +106,9 @@
                                 <label class="form-check-label mr-3"><strong>1</strong></label>       
                                 <input class="form-check-input " type="radio" id="gradio" name="gradio" value="">
                                 <label class="form-check-label mr-3"><strong>2</strong></label>     
-                                <input class="form-check-input" type="radio" id="gradio" name="gradio" value="">
+                                <input class="form-check-input" type="radio" id="gradio" name="gradio" value="" checked>
                                 <label class="form-check-label mr-3"><strong>3</strong></label> 
-                                <input class="form-check-input" type="radio" id="gradio" name="gradio" value="">
+                                <input class="form-check-input"  type="radio" id="gradio" name="gradio" value="" >
                                 <label class="form-check-label mr-3"><strong>4</strong></label> 
                                 <input class="form-check-input" type="radio" id="gradio" name="gradio" value="">
                                 <label class="form-check-label mr-3"><strong>5</strong></label> 
@@ -152,7 +162,7 @@
                 </div>
                 <div class="col-12 col-sm-6 align-self-center">
 
-                    <a href="#form-block" role="button" data-toggle="modal" data-target="#formModal" class="btn btn-block nav-link btn-warning">Reserve Table</a>
+                    <a href="#form-block" role="button" data-toggle="modal" id="reservemodalbtn" class="btn btn-block nav-link btn-warning">Reserve Table</a>
 
 
                     <!-- -----------------below code is for tooltip----------- -->
@@ -389,54 +399,7 @@
 
     
     <!-- below script is use for showing tooltip -->
-     <script>
-        // $(document).ready(function()
-        // {
-        //     $('[data-toggle="tooltip"]').tooltip();
-        // });
-        $(document).ready(function()
-        {
-            $('#mycarousel').carousel({interval:2000});
-            $("#carouselButton").click(function()
-            {
-                if ($("#carouselButton").children("span").hasClass('fa-pause')) {
-                    $("#mycarousel").carousel('pause');
-                    $("#carouselButton").children("span").removeClass('fa-pause');
-                    $("#carouselButton").children("span").addClass('fa-play');
-                }
-                else if ($("#carouselButton").children("span").hasClass('fa-play')){
-               
-                    $("#mycarousel").carousel('cycle');
-                    $("#carouselButton").children("span").removeClass('fa-play');
-                    $("#carouselButton").children("span").addClass('fa-pause');  
-                }
-
-            });
-            // $("#carouselButton").click(function(){
-            //     if ($("#carouselButton").children("span").hasClass('fa-pause')) {
-            //         $("#mycarousel").carousel('pause');
-            //         $("#carouselButton").children("span").removeClass('fa-pause');
-            //         $("#carouselButton").children("span").addClass('fa-play');
-            //     }
-            //     else if ($("#carouselButton").children("span").hasClass('fa-play')){
-            //         $("#mycarousel").carousel('cycle');
-            //         $("#carouselButton").children("span").removeClass('fa-play');
-            //         $("#carouselButton").children("span").addClass('fa-pause');                    
-            //     }
-            // });
-
-
-
-            // $('#caurosel-pause').click(function()
-            // {
-            //     $('#mycarousel').carousel('pause');
-            // });
-            // $('#caurosel-play').click(function()
-            // {
-            //     $('#mycarousel').carousel('cycle');
-            // });
-        });
-        </script> 
+     <script src="js/script.js"></script> 
 </body>
 
 </html>
