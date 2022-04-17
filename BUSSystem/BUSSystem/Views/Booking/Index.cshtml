@@ -1,0 +1,205 @@
+﻿@model BUSSystem.Models.Booking
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Bus Ticket Booking</h2>
+
+   @*public string No_of_Passengers { get; set; }
+        public DateTime Date { get; set; }
+        public DateTime Time { get; set; }
+        public string Bus_detail { get; set; }
+        public string Avaialable_Seats { get; set; }*@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Booking</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    @*<link href="~/Content/custom/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />*@
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/custom/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/custom/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/custom/fonts/iconic/css/material-design-iconic-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/custom/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/custom/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/custom/vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/custom/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/custom/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/custom/css/util.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/custom/css/main.css">
+    <!--===============================================================================================-->
+</head>
+<body>
+  
+        <div class="card">
+            <h3 class="card-header text-info">Ticket Booking</h3>
+            <div class="form-card">
+                @using (Html.BeginForm("Index", "Booking", FormMethod.Post))
+                {
+                <div class="col-12">
+                    <div class="row mt-1">
+                        <div class="form-group col-md-4 flex-column d-flex">
+                            <label class="form-control-label px-3 mt-3">
+                                Destination
+                            </label>
+                            @Html.DropDownListFor(m => m.Destination, new List<SelectListItem>
+                     { new SelectListItem{Text="Islamabad", Value="isb"},
+                       new SelectListItem{Text="Rawalpindi", Value="rwp"}}, "Please select your destionation", new { @class = "form-control" })
+                        </div>
+
+                        <div class="col-md-4 mt-3">
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1 mt-3">No Of passengers</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mt-3">
+                            <label>Select Date</label>
+                            <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" inline="true">
+                                <input placeholder="Select date" type="text" id="example" class="form-control">
+                                @*<i class="fas fa-calendar input-prefix"></i>*@
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Select Time</label>
+                                <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" inline="true">
+                                    <input placeholder="Select date" type="text" id="example" class="form-control">
+                                    @*<i class="fas fa-calendar input-prefix"></i>*@
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="col col-md-4 ">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1 mt-3">Avaialable Seats</label>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option>1</option>
+                                            <option>5</option>
+                                            <option>10</option>
+                                            <option>15</option>
+                                            <option>20</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                       
+                    <div class="row">
+                        @*<div class="col-md-8">*@
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Bus Detail</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+                            @*</div>*@
+                        </div>
+
+                    </div>
+                </div>
+                <button class="btn btn-primary m-2" type="button" style="float:right; width:10%">Book Now</button>
+                    }
+                    </div>
+
+
+                </div>
+    <!--<div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+               
+                <div class="login100-form validate-form">
+                    <span class="login100-form-logo">
+                        <i class="zmdi zmdi-landscape"></i>
+                    </span>
+
+                    <span class="login100-form-title p-b-34 p-t-27">
+                        Ticket Booking
+                    </span>
+                    <div class=" form-group" data-validate="Enter username">
+                       
+                        @*<input class="input100" type="text" name="username" placeholder="Username">*@
+                        <!--<span class="focus-input100" data-placeholder="&#xf207;"></span>
+                    </div>
+                    <div class="wrap-input100 validate-input" data-validate="Enter username">
+                       
+                        @*@Html.DropDownList(n => n.Destination, new { placeholder = "Name", @class = "input100" })*@
+                        @*<input class="input100" type="text" name="username" placeholder="Username">*@
+                        <!--<span class="focus-input100" data-placeholder="&#xf207;"></span>
+                    </div>
+
+
+
+                    <div class="contact100-form-checkbox">
+                        <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                        <label class="label-checkbox100" for="ckb1">
+                            Remember me
+                        </label>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn" type="submit">
+                            Login
+                        </button>
+                    </div>
+
+                    <div class="text-center p-t-90">
+                        <a class="txt1" href="#">
+                            Forgot Password?
+                        </a>
+                    </div>
+                </div>
+                }
+                <a href="@Url.Action("Signup", "Account")" style="" class="nav-link">Create a new user</a>
+            </div>
+        </div>
+    </div>-->
+
+
+    <div id="dropDownSelect1"></div>
+
+    <!--===============================================================================================-->
+    <script src="~/Content/custom/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/custom/vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/custom/vendor/bootstrap/js/popper.js"></script>
+    <script src="~/Content/custom/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/custom/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/custom/vendor/daterangepicker/moment.min.js"></script>
+    <script src="~/Content/custom/vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/custom/vendor/countdowntime/countdowntime.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/custom/js/main.js"></script>
+    <script>// Data Picker Initialization
+        $('.datepicker').datepicker({
+            inline: true
+        });</script>
+</body>
+</html>
+

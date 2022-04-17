@@ -1,0 +1,109 @@
+﻿
+@{
+    ViewBag.Title = "Signup";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login V3</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    @*<link href="~/Content/custom/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />*@
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/custom/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/custom/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/custom/fonts/iconic/css/material-design-iconic-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/custom/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/custom/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/custom/vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/custom/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/custom/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/custom/css/util.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/custom/css/main.css">
+    <!--===============================================================================================-->
+</head>
+<body>
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <form class="login100-form validate-form">
+                    <span class="login100-form-logo">
+                        <i class="zmdi zmdi-landscape"></i>
+                    </span>
+
+                    <span class="login100-form-title p-b-34 p-t-27">
+                        Sign Up
+                    </span>
+
+                    <div class="wrap-input100 validate-input" data-validate="Enter name">
+                        <input class="input100" type="text" name="name" placeholder="Enter your name">
+                        <span class="focus-input100" data-placeholder="&#xf207;"></span>
+                    </div>
+                    <div class="wrap-input100 validate-input" data-validate="Enter Email">
+                        <input class="input100" type="text" name="name" placeholder="Enter email">
+                        <span class="focus-input100" data-placeholder="&#xf207;"></span>
+                    </div>
+                    <div class="wrap-input100 validate-input" data-validate="Enter Passowrd">
+                        <input class="input100" type="text" name="name" placeholder="Enter passworde">
+                        <span class="focus-input100" data-placeholder="&#xf207;"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Confirm password">
+                        <input class="input100" type="password" name="pass" placeholder="Confirm Password">
+                        <span class="focus-input100" data-placeholder="&#xf191;"></span>
+                    </div>
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn">
+                            Sign Up
+                        </button>
+                    </div>
+
+                   
+                </form>
+                <a href="@Url.Action("Login", "Account")" style="" class="nav-link">Already have account? Login</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="dropDownSelect1"></div>
+
+    <!--===============================================================================================-->
+    <script src="~/Content/custom/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/custom/vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/custom/vendor/bootstrap/js/popper.js"></script>
+    <script src="~/Content/custom/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/custom/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/custom/vendor/daterangepicker/moment.min.js"></script>
+    <script src="~/Content/custom/vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/custom/vendor/countdowntime/countdowntime.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/custom/js/main.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
